@@ -2,77 +2,546 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- google font manrope -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <!-- google font manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/e5d5d145df.js" crossorigin="anonymous"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                        'theme-color': '#FF4240',
-                    }
-                }
-            }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'theme-color': '#FF4240',
+            'theme-txt-color': '#13131899',
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <style>
-        .manrope-font {
-            font-family: 'Manrope', sans-serif;
-        }
-    </style>
+  <style>
+    .manrope-font {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
 </head>
 
 <body class="manrope-font">
-    <header class="container mx-auto">
-            <nav>
-                <div class="navbar bg-base-100">
-                    <div class="navbar-start">
-                      <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </div>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                          <li><a>Home</a></li>
-                          <li><a>About</a></li>
-                          <li><a>Pages</a></li>
-                          <li><a>Blog</a></li>
-                          <li><a>Contact</a></li>                          
-                        </ul>
-                      </div>
-                      <a class="btn btn-ghost text-xl">Hockey<span class="text-theme-color">’</span>s</a>
-                    </div>
-                    <div class="navbar-center hidden lg:flex">
-                      <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                          <li><a>About</a></li>
-                          <li><a>Pages</a></li>
-                          <li><a>Blog</a></li>
-                          <li><a>Contact</a></li> 
-                      </ul>
-                    </div>
-                    <div class="navbar-end">
-                      <a class="btn">Button</a>
-                    </div>
-                  </div>
-            </nav>
-    </header>
-    <main class="container mx-auto">
+  <header class="container mx-auto">
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start justify-around">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a class="text-theme-color font-bold">Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost  text-4xl font-extrabold">Hockey<span class="text-theme-color">’</span>s</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="text-theme-color font-bold">Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Button</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container mx-auto">
+    <!-- banner caurosel -->
+    <section class="border-b border-dashed pb-24">
+      <div class="carousel lg:h-[550px] w-auto">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="Images/1.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="Images/field-hockey.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="Images/1.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="Images/field-hockey.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </main>
-    <footer>
+    <!-- professional hockey club section -->
+    <section class="border-b border-dashed pb-8 mt-8 mb-11">
+      <h2 class="text-4xl font-extrabold text-center mb-6">
+        Professional Hockeys Club
+      </h2>
+      <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">Enter the world of hockey with the
+        a professional club. Make it pro with expert guidance and top tier equipment.</p>
+    </section>
 
-    </footer>
+    <!-- radial progress -->
+    <section class="flex flex-col lg:flex-row gap-8 border-b border-dashed pb-24">
+      <!-- first radial -->
+      <div class="text-center">
+        <div class="radial-progress text-primary" style="--value:85;" role="progressbar">85%</div>
+        <h4 class="text-xl font-semibold mt-6 mb-4">Prayer Facility</h4>
+        <p>Proper facilities for players to ensure their performance.</p>
+      </div>
+      <!-- second radial -->
+      <div class="text-center">
+        <div class="radial-progress text-primary" style="--value:95;" role="progressbar">95%</div>
+        <h4 class="text-xl font-semibold mt-6 mb-4">Experienced Coach</h4>
+        <p>A highly skilled coach to guide our players on the field.</p>
+      </div>
+      <!-- third radial -->
+      <div class="text-center">
+        <div class="radial-progress text-primary" style="--value:90;" role="progressbar">90%</div>
+        <h4 class="text-xl font-semibold mt-6 mb-4">Senior Player</h4>
+        <p>Talented senior players to compete in global rankings.</p>
+      </div>
+      <!-- fourth radial -->
+      <div class="text-center">
+        <div class="radial-progress text-primary" style="--value:80;" role="progressbar">80%</div>
+        <h4 class="text-xl font-semibold mt-6 mb-4">Training Ground</h4>
+        <p>Top tier training grounds for our players to practice.</p>
+      </div>
+    </section>
+
+    <!-- Programmes sections -->
+    <section class="border-b border-dashed mt-8 pb-12">
+      <h2 class="text-4xl font-extrabold text-center mb-6">
+        Program Sections
+      </h2>
+      <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">Our club offers special programmes
+        for player of all sectors. Join now and train with us to become the nest rising star of the hockey world.</p>
+    </section>
+
+    <!-- offered programmes section -->
+    <section class="m-4 border-b border-dashed pb-24 mt-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto">
+        <!-- first offer -->
+        <div class="hero rounded-xl" style="background-image: url(./Images/2.png);">
+          <div class="hero-overlay bg-opacity-30 rounded-xl"></div>
+          <div class="hero-content text-neutral-content">
+            <div class="max-w-md lg:-ml-28 pb-10 pt-24">
+              <h1 class="mb-4 text-2xl font-extrabold text-white">Junior Program</h1>
+              <p class="mb-5">Want to try hockey at a young age. Our Junior Program is for you. Here you will find a
+                friendly coach who will help you learn the basics of this wonderful sport.</p>
+              <button class="btn btn-primary">Register Now!</button>
+            </div>
+          </div>
+        </div>
+        <!-- second offer -->
+        <div class="hero rounded-xl" style="background-image: url(./Images/3.png);">
+          <div class="hero-overlay bg-opacity-30 rounded-xl"></div>
+          <div class="hero-content text-neutral-content">
+            <div class="max-w-md lg:-ml-28 pb-10 pt-24">
+              <h1 class="mb-4 text-2xl font-extrabold text-white">Teenager Program</h1>
+              <p class="mb-5">Are you a teen hockey player ready to take your game to the next level. Join our teenager
+                program and work towards becoming a pro. </p>
+              <button class="btn btn-primary">Register Now!</button>
+            </div>
+          </div>
+        </div>
+        <!-- third offer -->
+        <div class="hero col-span-1 lg:col-span-2 rounded-xl" style="background-image: url(./Images/4.png);">
+          <div class="hero-overlay bg-[#13131880] bg-opacity-30 rounded-xl"></div>
+          <div class="hero-content text-neutral-content">
+            <div class="max-w-md lg:-ml-[750px] pb-10 pt-24">
+              <h1 class="mb-4 text-2xl font-extrabold text-white">Professional Program</h1>
+              <p class="mb-5">Do you want to compete with the worlds top players in the highest level of this sport.
+                Join our professional program and take on the worlds best players with our support.</p>
+              <button class="btn btn-primary">Register Now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our New Products section -->
+    <section class="border-b border-dashed mt-8 pb-12">
+      <h2 class="text-4xl font-extrabold text-center mb-6">
+        Our New Products
+      </h2>
+      <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">Take a look at our latest products.
+        These products are of the best quality and have a budget friendly price.</p>
+    </section>
+
+    <!-- New products cards -->
+    <section class="mt-12 mb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- First card -->
+        <div class="card bg-base-100 shadow-xl flex flex-col lg:flex-row border border-[#1313181A] rounded-2xl">
+          <figure class="px-10">
+            <img src="Images/5.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-4">
+
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <h5 class="text-theme-txt-color font-semibold">5.0</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-eye" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">20</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">200</h5>
+              </div>
+
+            </div>
+            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
+            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <div class="flex gap-5">
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <div class="flex gap-2 items-center text-left">
+                <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
+                <p class="text-theme-txt-color">Delivery Fee : Free</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- second card -->
+        <div class="card bg-base-100 shadow-xl flex flex-col lg:flex-row border border-[#1313181A] rounded-2xl">
+          <figure class="px-10">
+            <img src="Images/6.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-4">
+
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <h5 class="text-theme-txt-color font-semibold">5.0</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-eye" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">20</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">200</h5>
+              </div>
+
+            </div>
+            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
+            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <div class="flex gap-5">
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <div class="flex gap-2 items-center text-left">
+                <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
+                <p class="text-theme-txt-color">Delivery Fee : Free</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third card -->
+        <div class="card bg-base-100 shadow-xl flex flex-col lg:flex-row border border-[#1313181A] rounded-2xl">
+          <figure class="px-10">
+            <img src="Images/7.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-4">
+
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <h5 class="text-theme-txt-color font-semibold">5.0</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-eye" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">20</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">200</h5>
+              </div>
+
+            </div>
+            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
+            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <div class="flex gap-5">
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <div class="flex gap-2 items-center text-left">
+                <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
+                <p class="text-theme-txt-color">Delivery Fee : Free</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth card -->
+        <div class="card bg-base-100 shadow-xl flex flex-col lg:flex-row border border-[#1313181A] rounded-2xl">
+          <figure class="px-10">
+            <img src="Images/8.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-4">
+
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <h5 class="text-theme-txt-color font-semibold">5.0</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-eye" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">20</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">200</h5>
+              </div>
+
+            </div>
+            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
+            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <div class="flex gap-5">
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <div class="flex gap-2 items-center text-left">
+                <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
+                <p class="text-theme-txt-color">Delivery Fee : Free</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fifth card -->
+        <div class="card bg-base-100 shadow-xl flex flex-col lg:flex-row border border-[#1313181A] rounded-2xl">
+          <figure class="px-10">
+            <img src="Images/9.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-4">
+
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <h5 class="text-theme-txt-color font-semibold">5.0</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-eye" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">20</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">200</h5>
+              </div>
+
+            </div>
+            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
+            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <div class="flex gap-5">
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <div class="flex gap-2 items-center text-left">
+                <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
+                <p class="text-theme-txt-color">Delivery Fee : Free</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sixth card -->
+        <div class="card bg-base-100 shadow-xl flex flex-col lg:flex-row border border-[#1313181A] rounded-2xl">
+          <figure class="px-10">
+            <img src="Images/10.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-4">
+
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <h5 class="text-theme-txt-color font-semibold">5.0</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-eye" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">20</h5>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart" style="color: #13131899;"></i>
+                <h5 class="text-theme-txt-color font-semibold">200</h5>
+              </div>
+
+            </div>
+            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
+            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <div class="flex gap-5">
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <div class="flex gap-2 items-center text-left">
+                <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
+                <p class="text-theme-txt-color">Delivery Fee : Free</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Question section -->
+    <section class="border-y border-dashed mt-8 py-12">
+      <h2 class="text-4xl font-extrabold text-center mb-6">
+        Clients Question
+      </h2>
+      <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">We were asked many questions by our
+        clients and happily answered their quires. Here are some of the most frequently asked questions by our clients.
+        Please feel free to read them.</p>
+    </section>
+    <!-- questions sections-->
+    <section>
+      <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content flex-col lg:flex-row">
+          <img src="Images/11.png" class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                Our Equipment
+              </div>
+              <div class="collapse-content">
+                <p>We provide equipments manufactured by globally trusted brands and make sure all our equipments are of high quality.</p>
+              </div>
+
+            </div>
+
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Hockey Training
+              </div>
+              <div class="collapse-content">
+                <p>Our training system is very advanced and unique. We also follow the drills that the world class teams follow along with our specialized drills.</p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Private Lessons
+              </div>
+              <div class="collapse-content">
+                <p>We do provide our players with individual care based on their needs if they take privet lessons. This is highly effective as it boosts their growth as a player.</p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Ski Touring
+              </div>
+              <div class="collapse-content">
+                <p>Some of our programmes include ski touring. Make sure to check them as you register as it comes at a very low cost.</p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Booking
+              </div>
+              <div class="collapse-content">
+                <p>Booking our fields for privet matches is possible. You would need to contact us via the contact methods provided in our website.</p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Pricings
+              </div>
+              <div class="collapse-content">
+                <p>Most of our services and facilities come at a very reasonable price and if you look out for offers during our summer campaign you might get a huge discount too.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quibusdam, minus ullam, doloremque, enim amet
+      nesciunt nihil voluptatem nobis voluptatum est odio ipsum sequi aperiam voluptatibus. Et esse deserunt neque?
+      Odit eligendi possimus eos nemo sequi vitae voluptatum in error animi debitis. Adipisci natus velit
+      exercitationem, obcaecati veniam deleniti sit eum, soluta ab nobis, quisquam possimus enim dolorem dolores minus.
+      Officiis porro debitis, itaque consequatur expedita enim nobis officia accusantium voluptatibus possimus quaerat.
+      Alias minima laboriosam, repellat repudiandae perferendis ut molestiae ipsam pariatur, cupiditate atque eos
+      incidunt totam, accusamus commodi.
+      Repellat autem itaque, deleniti maxime culpa fugiat architecto dolorum nulla iure assumenda laboriosam aliquam
+      praesentium ullam quia consequatur earum voluptate delectus animi totam. Molestias ex assumenda quisquam
+      repudiandae repellat. Enim!
+      Reiciendis eligendi tempora quos dolor. Ad molestias nostrum atque! Aperiam dolores natus quis inventore saepe
+      dicta numquam fugit quos sequi nemo accusamus, pariatur velit dolor molestias accusantium temporibus, odio
+      consequatur.
+      Eligendi enim officia sed hic ex, incidunt cum corrupti atque quam similique magni alias impedit illum culpa
+      cumque quibusdam veniam aliquid in quas reiciendis. Perferendis eligendi ducimus omnis perspiciatis impedit.
+      Temporibus, suscipit neque. Accusamus perspiciatis vel necessitatibus officia. Tempora quaerat corrupti, est
+      perferendis vel, eaque iusto cupiditate esse aliquam velit labore deleniti quidem unde. Veniam consequatur eius
+      corporis at quo?
+      Exercitationem laboriosam nihil nesciunt dolor, facere tempore consequuntur illum facilis! Consequatur eligendi
+      iure, commodi reiciendis minima eos quasi corrupti. Fugiat fuga cupiditate eum aliquid dignissimos odit dicta,
+      autem eius possimus.
+      Harum quis dolor cum quisquam doloribus. Molestiae sed, dolorem laudantium dolor eius dolore error similique
+      dolores harum quisquam, vitae mollitia perspiciatis debitis qui incidunt labore nemo voluptatem. In, aspernatur
+      quidem!
+      Odit porro obcaecati ipsa minima laudantium, ut ullam assumenda officiis nostrum? Adipisci hic ab laboriosam.
+      Dolor voluptate optio cumque vitae maiores? Omnis corporis perspiciatis laborum blanditiis deleniti perferendis
+      alias amet.</p>
+  </footer>
 </body>
 
 </html>
