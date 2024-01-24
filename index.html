@@ -23,6 +23,7 @@
             'theme-color': '#FF4240',
             'theme-txt-color': '#13131899',
             'theme-input-color': '#131318',
+            'theme-footer-color': '#ffffff71',
           }
         }
       }
@@ -40,7 +41,7 @@
   <header class="container mx-auto">
     <nav>
       <div class="navbar bg-base-100">
-        <div class="navbar-start justify-around">
+        <div class="navbar-start justify-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -68,12 +69,14 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn">Button</a>
+          <i class="fa-solid fa-magnifying-glass mr-3" style="color: #999999;"></i>
+          <a class="btn bg-theme-color border-theme-color text-white">Get Ticket</a>
         </div>
       </div>
     </nav>
   </header>
-  <main class="container mx-auto">
+  <main class="container mx-auto relative">
+
     <!-- banner caurosel -->
     <section class="border-b border-dashed pb-24">
       <div class="carousel lg:h-[550px] w-auto">
@@ -108,9 +111,15 @@
       </div>
     </section>
 
+    <!-- Meet your heros -->
+    <div class="bg-black p-8 rounded-2xl max-w-fit lg:absolute lg:top-80 lg:left-1/2">
+      <h3 class="text-white text-lg lg:text-2xl font-extrabold mb-2">Meet all the heroes from the field</h3>
+      <p class="text-[#ffffff9a] font-semibold lg:max-w-lg">Start your amazing journey in the world of hockey. Get a chance to meet the legendary players of the golden age.</p>
+    </div>
+
     <!-- professional hockey club section -->
     <section class="border-b border-dashed pb-8 mt-8 mb-11">
-      <h2 class="text-4xl font-extrabold text-center mb-6">
+      <h2 class="text-xl lg:text-4xl font-extrabold text-center mb-6">
         Professional Hockeys Club
       </h2>
       <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">Enter the world of hockey with the
@@ -118,36 +127,36 @@
     </section>
 
     <!-- radial progress -->
-    <section class="flex flex-col lg:flex-row gap-8 border-b border-dashed pb-24">
+    <section class="flex flex-col lg:flex-row gap-8 border-b border-dashed pb-24 justify-center">
       <!-- first radial -->
       <div class="text-center">
-        <div class="radial-progress text-primary" style="--value:85;" role="progressbar">85%</div>
+        <div class="radial-progress text-theme-color" style="--value:87;" role="progressbar">87%</div>
         <h4 class="text-xl font-semibold mt-6 mb-4">Prayer Facility</h4>
-        <p>Proper facilities for players to ensure their performance.</p>
+        <p class="w-60 mx-auto">Proper facilities for players to ensure their performance.</p>
       </div>
       <!-- second radial -->
       <div class="text-center">
-        <div class="radial-progress text-primary" style="--value:95;" role="progressbar">95%</div>
+        <div class="radial-progress text-[#49D293]" style="--value:95;" role="progressbar">95%</div>
         <h4 class="text-xl font-semibold mt-6 mb-4">Experienced Coach</h4>
-        <p>A highly skilled coach to guide our players on the field.</p>
+        <p class="w-60 mx-auto">A highly skilled coach to guide our players on the field.</p>
       </div>
       <!-- third radial -->
       <div class="text-center">
-        <div class="radial-progress text-primary" style="--value:90;" role="progressbar">90%</div>
+        <div class="radial-progress text-[#FFB546]" style="--value:90;" role="progressbar">90%</div>
         <h4 class="text-xl font-semibold mt-6 mb-4">Senior Player</h4>
-        <p>Talented senior players to compete in global rankings.</p>
+        <p class="w-60 mx-auto">Talented senior players to compete in global rankings.</p>
       </div>
       <!-- fourth radial -->
       <div class="text-center">
-        <div class="radial-progress text-primary" style="--value:80;" role="progressbar">80%</div>
+        <div class="radial-progress text-[#4C8DF1]" style="--value:80;" role="progressbar">80%</div>
         <h4 class="text-xl font-semibold mt-6 mb-4">Training Ground</h4>
-        <p>Top tier training grounds for our players to practice.</p>
+        <p class="w-60 mx-auto">Top tier training grounds for our players to practice.</p>
       </div>
     </section>
 
     <!-- Programmes sections -->
     <section class="border-b border-dashed mt-8 pb-12">
-      <h2 class="text-4xl font-extrabold text-center mb-6">
+      <h2 class="text-xl lg:text-4xl font-extrabold text-center mb-6">
         Program Sections
       </h2>
       <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">Our club offers special programmes
@@ -162,10 +171,10 @@
           <div class="hero-overlay bg-opacity-30 rounded-xl"></div>
           <div class="hero-content text-neutral-content">
             <div class="max-w-md lg:-ml-28 pb-10 pt-24">
-              <h1 class="mb-4 text-2xl font-extrabold text-white">Junior Program</h1>
+              <h1 class="mb-4 text-xl lg:text-2xl font-extrabold text-white">Junior Program</h1>
               <p class="mb-5">Want to try hockey at a young age. Our Junior Program is for you. Here you will find a
                 friendly coach who will help you learn the basics of this wonderful sport.</p>
-              <button class="btn btn-primary">Register Now!</button>
+              <button class="btn bg-theme-color border-theme-color text-white">Register Now!</button>
             </div>
           </div>
         </div>
@@ -174,10 +183,10 @@
           <div class="hero-overlay bg-opacity-30 rounded-xl"></div>
           <div class="hero-content text-neutral-content">
             <div class="max-w-md lg:-ml-28 pb-10 pt-24">
-              <h1 class="mb-4 text-2xl font-extrabold text-white">Teenager Program</h1>
+              <h1 class="mb-4 text-xl lg:text-2xl font-extrabold text-white">Teenager Program</h1>
               <p class="mb-5">Are you a teen hockey player ready to take your game to the next level. Join our teenager
                 program and work towards becoming a pro. </p>
-              <button class="btn btn-primary">Register Now!</button>
+              <button class="btn bg-theme-color border-theme-color text-white">Register Now!</button>
             </div>
           </div>
         </div>
@@ -186,10 +195,10 @@
           <div class="hero-overlay bg-[#13131880] bg-opacity-30 rounded-xl"></div>
           <div class="hero-content text-neutral-content">
             <div class="max-w-md lg:-ml-[750px] pb-10 pt-24">
-              <h1 class="mb-4 text-2xl font-extrabold text-white">Professional Program</h1>
+              <h1 class="mb-4 text-xl lg:text-2xl font-extrabold text-white">Professional Program</h1>
               <p class="mb-5">Do you want to compete with the worlds top players in the highest level of this sport.
                 Join our professional program and take on the worlds best players with our support.</p>
-              <button class="btn btn-primary">Register Now!</button>
+              <button class="btn bg-theme-color border-theme-color text-white">Register Now!</button>
             </div>
           </div>
         </div>
@@ -198,7 +207,7 @@
 
     <!-- Our New Products section -->
     <section class="border-b border-dashed mt-8 pb-12">
-      <h2 class="text-4xl font-extrabold text-center mb-6">
+      <h2 class="text-xl lg:text-4xl font-extrabold text-center mb-6">
         Our New Products
       </h2>
       <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">Take a look at our latest products.
@@ -230,8 +239,8 @@
               </div>
 
             </div>
-            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
-            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-xl font-extrabold text-left">World Cup Jacket</h2>
+            <p class="text-theme-txt-color text-left">Show of your fasion sence with our stylish jacket collection.</p>
             <div class="flex gap-5">
               <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
               <div class="flex gap-2 items-center text-left">
@@ -240,7 +249,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+              <!-- <button class="btn bg-theme-color border-theme-color text-white">Buy Now</button> -->
             </div>
           </div>
         </div>
@@ -267,18 +276,18 @@
               </div>
 
             </div>
-            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
-            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-xl font-extrabold text-left">World Cup Football</h2>
+            <p class="text-theme-txt-color text-left">Practice your skills with the world cup football.</p>
             <div class="flex gap-5">
-              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $7.00</p>
               <div class="flex gap-2 items-center text-left">
                 <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
                 <p class="text-theme-txt-color">Delivery Fee : Free</p>
               </div>
             </div>
-            <div class="card-actions">
+            <!-- <div class="card-actions">
               <button class="btn btn-primary">Buy Now</button>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -304,17 +313,17 @@
               </div>
 
             </div>
-            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
-            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-xl font-extrabold text-left">Trendy Cap</h2>
+            <p class="text-theme-txt-color text-left">Show of your fashion sense with our stylish trendy cap collection.</p>
             <div class="flex gap-5">
-              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $5.00</p>
               <div class="flex gap-2 items-center text-left">
                 <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
                 <p class="text-theme-txt-color">Delivery Fee : Free</p>
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+              <!-- <button class="btn btn-primary">Buy Now</button> -->
             </div>
           </div>
         </div>
@@ -341,17 +350,17 @@
               </div>
 
             </div>
-            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
-            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-xl font-extrabold text-left">Club Jersey</h2>
+            <p class="text-theme-txt-color text-left">Show of your game face with our stylish jersey collection.</p>
             <div class="flex gap-5">
-              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $12.00</p>
               <div class="flex gap-2 items-center text-left">
                 <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
                 <p class="text-theme-txt-color">Delivery Fee : Free</p>
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+              <!-- <button class="btn btn-primary">Buy Now</button> -->
             </div>
           </div>
         </div>
@@ -378,17 +387,17 @@
               </div>
 
             </div>
-            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
-            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-xl font-extrabold text-left">Helmet</h2>
+            <p class="text-theme-txt-color text-left">Protect yourself from injury with high quality helmets from collection.</p>
             <div class="flex gap-5">
-              <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
+              <p class="text-[#FF4240] font-extrabold text-left">Price - $15.00</p>
               <div class="flex gap-2 items-center text-left">
                 <i class="fa-solid fa-cart-shopping" style="color: #13131899;"></i>
                 <p class="text-theme-txt-color">Delivery Fee : Free</p>
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+              <!-- <button class="btn btn-primary">Buy Now</button> -->
             </div>
           </div>
         </div>
@@ -415,8 +424,8 @@
               </div>
 
             </div>
-            <h2 class="text-xl font-extrabold text-left">Shoes!</h2>
-            <p class="text-theme-txt-color text-left">If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-xl font-extrabold text-left">Classic Football</h2>
+            <p class="text-theme-txt-color text-left">Flex your skills with a classic football and practice to get better.</p>
             <div class="flex gap-5">
               <p class="text-[#FF4240] font-extrabold text-left">Price - $22.00</p>
               <div class="flex gap-2 items-center text-left">
@@ -425,7 +434,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+              <!-- <button class="btn btn-primary">Buy Now</button> -->
             </div>
           </div>
         </div>
@@ -434,7 +443,7 @@
 
     <!-- Clients Question section -->
     <section class="border-y border-dashed mt-8 py-12">
-      <h2 class="text-4xl font-extrabold text-center mb-6">
+      <h2 class="text-2xl lg:text-4xl font-extrabold text-center mb-6">
         Clients Question
       </h2>
       <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">We were asked many questions by our
@@ -521,7 +530,7 @@
 
     <!-- Get In Touch section -->
     <section class="border-y border-dashed mt-8 py-12">
-      <h2 class="text-4xl font-extrabold text-center mb-6">
+      <h2 class="text-xl lg:text-4xl font-extrabold text-center mb-6">
         Get In Touch
       </h2>
       <p class="text-theme-txt-color font-semibold text-center mx-auto lg:w-[600px]">Our clients can get in touch with
@@ -582,12 +591,15 @@
 
           <div class="lg:col-span-2 block mx-auto">
             <h4 class="text-xl font-bold mb-4">Message</h4>
-            <textarea class="bg-theme-input-color bg-opacity-[0.03] py-5 pl-5 pr-40 rounded-xl max-w-[355px] max-h-52 lg:max-w-full lg:max-h-full"
+            <textarea
+              class="bg-theme-input-color bg-opacity-[0.03] py-5 pl-5 pr-40 rounded-xl max-w-[355px] max-h-52 lg:max-w-full lg:max-h-full"
               placeholder="Write your message" cols="68" rows="20"></textarea>
 
           </div>
         </div>
-        <button class="flex mt-8 btn bg-theme-color text-white text-xl font-bold w-4/5 lg:w-full mx-auto items-center">Send Message</button>
+        <button
+          class="flex mt-8 btn bg-theme-color text-white text-xl font-bold w-4/5 lg:w-full mx-auto items-center">Send
+          Message</button>
       </div>
     </section>
 
@@ -595,17 +607,88 @@
     <section class="flex flex-col items-center bg-theme-input-color bg-opacity-[0.03] py-9 mt-12 rounded-2xl mx-5">
       <h3 class="text-2xl font-extrabold mb-6">Social Media</h3>
       <div class="flex gap-8">
-        <i class="fa-brands fa-twitter" style="color: #000000;"></i>
-        <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
-        <i class="fa-brands fa-instagram" style="color: #000000;"></i>
-        <i class="fa-brands fa-github" style="color: #000000;"></i>
+        <a href=""><i class="fa-brands fa-twitter" style="color: #000000;"></i></a>
+        <a href=""><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></a>
+        <a href=""><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+        <a href=""><i class="fa-brands fa-github" style="color: #000000;"></i></a>
       </div>
 
     </section>
+
   </main>
-  <footer>
-   
+
+  <footer class="footer p-10 bg-[#131318] text-base-content mt-24">
+    <aside class="mx-auto flex flex-col items-center">
+      <h3 class="text-white text-3xl font-extrabold mb-4">Get In Touch</h3>
+      <p class="w-80 text-theme-footer-color font-semibold mb-6 text-center lg:text-left">For our support or any kind of informatin you may need
+        please feel free to contact us. Our helpline and email services are available 24/7.</p>
+      <div class="flex gap-4 items-center mb-4">
+        <i class="fa-regular fa-envelope" style="color: #ff4240;"></i>
+        <p class="text-theme-footer-color">hockeys@support.com</p>
+      </div>
+      <div class="flex gap-4 items-center">
+        <i class="fa-solid fa-phone" style="color: #ff4240;"></i>
+        <p class="text-theme-footer-color">(+62) 123-321-543</p>
+      </div>
+    </aside>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-40 text-center lg:text-left">
+      <nav class="text-theme-footer-color flex flex-col gap-2">
+        <header class="text-white text-lg font-bold mb-7">Company</header>
+        
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Leadership</a>
+          <a class="link link-hover">Careers</a>
+          <a class="link link-hover">News & Article</a>
+          <a class="link link-hover">Legal Notice</a>
+        
+      </nav>
+
+      <nav class="text-theme-footer-color flex flex-col gap-2">
+        <header class="text-white text-lg font-bold mb-7">Support</header>
+        
+          <a class="link link-hover">Help Center</a>
+          <a class="link link-hover">FAQ</a>
+          <a class="link link-hover">Ticket Support</a>
+          <a class="link link-hover">Contact Us</a>
+        
+      </nav>
+    
+
+    <nav class="text-theme-footer-color flex flex-col gap-2 col-span-2 mx-auto mt-10 lg:col-span-1 lg:mt-auto">
+      <header class="text-white text-lg font-bold mb-7">Services</header>
+      <a class="link link-hover">Academy</a>
+      <a class="link link-hover">Group Lesson</a>
+      <a class="link link-hover">Private Lesson</a>
+      <a class="link link-hover">Hockeys for kids</a>
+      <a class="link link-hover">Hockeys for Adult</a>
+    </nav>
+    </div>
+      
   </footer>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae blanditiis commodi laboriosam! Esse necessitatibus
+    totam molestias dolorem, mollitia alias unde officia pariatur culpa laudantium at exercitationem consequuntur
+    architecto dolores nihil.
+    Ipsa ipsam nobis officia, omnis tempora impedit fugiat vero quis a, repellendus, veniam velit ipsum consectetur
+    inventore quidem laborum assumenda id sapiente ab unde vitae odio! Porro corporis est illo.
+    Culpa sunt doloribus quas eos. Exercitationem, illum tempora quos eos rerum, tenetur ratione itaque quam sequi
+    veniam eligendi alias id velit magni accusantium! Eos, praesentium atque ex error quo doloremque!
+    Ipsam magni aut adipisci velit minus, ipsum animi laborum ducimus modi excepturi cupiditate esse numquam? Quas enim
+    placeat quam corrupti officiis dolores est voluptas earum aspernatur commodi. Sint, quos dolore.
+    Molestiae beatae suscipit autem itaque deleniti placeat ratione! Tenetur doloremque, officia ratione deleniti, nemo
+    beatae in atque iure sit saepe, nostrum at id! Similique perferendis illum, id maxime illo nesciunt.
+    Eos, repudiandae id officiis facere fugiat voluptatum consequuntur ad debitis dolorem, tenetur rem corporis deserunt
+    recusandae! Consectetur harum debitis dolorum veniam magni blanditiis velit nam? Magnam neque dicta consequatur
+    minus.
+    Neque consectetur optio possimus harum quod. Perspiciatis nisi, aliquid suscipit quam perferendis excepturi porro
+    quasi eaque eum earum debitis ab totam explicabo laborum, fugiat asperiores quaerat quis sed ullam dignissimos!
+    Corrupti voluptates officia nisi? Ex veniam sint quia molestias animi! Maxime nihil rerum sunt at? Illo qui id nisi
+    ad aut quibusdam recusandae aspernatur. Sunt doloremque iusto ratione sint ipsa.
+    Voluptas omnis soluta iure aperiam odio? Quibusdam quod tempore beatae laborum eos harum itaque tenetur modi, ad in
+    eius doloribus neque quidem velit enim dolores, fugiat dolore voluptates sequi ea.
+    Id veritatis officiis rerum minima ipsa possimus voluptas quisquam nulla placeat suscipit esse facilis itaque error
+    dolores repellat animi ipsam beatae harum quasi quos, quo libero dignissimos. Nihil, maiores unde.</p>
 </body>
 
 </html>
